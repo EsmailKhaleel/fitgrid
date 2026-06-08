@@ -1,0 +1,68 @@
+{
+  "name": "fitgrid",
+  "version": "1.1.0",
+  "description": "Stop using breakpoints — container-first responsive grid layouts",
+  "author": "Esmail Khaleel <esmailkhaleel27@gmail.com> (https://github.com/EsmailKhaleel)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsmailKhaleel/fitgrid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EsmailKhaleel/fitgrid/issues"
+  },
+  "homepage": "https://github.com/EsmailKhaleel/fitgrid#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "size": "size-limit",
+    "prepublishOnly": "npm run build && npm run test && npm run typecheck"
+  },
+  "keywords": [
+    "tailwind",
+    "grid",
+    "responsive",
+    "css",
+    "css-grid",
+    "layout",
+    "container",
+    "container-first",
+    "container-queries",
+    "auto-fit",
+    "minmax",
+    "twgrid",
+    "no-breakpoints"
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "size-limit": "^11.1.6",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
